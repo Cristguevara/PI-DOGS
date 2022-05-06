@@ -1,0 +1,57 @@
+.NavBar{
+    background: url(../images/NavBar.PNG);
+    margin-bottom: 10px;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.filtertext{
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size:30px;
+    margin: 20px 0px 0px 0px;
+}
+.filterContainer{
+    padding-left: 5%;
+}
+.btnCreate{
+    position:relative;
+    border: 5px solid #cddffc;
+    color:#cddffc;
+    font-weight: 700;
+    font-size:30px;
+    background-color: transparent;
+    transition: color 0.5s, background-color 0.5s; 
+    border-radius: 10px;
+    font-family:"Montserrat", sans-serif;
+}
+.btnCreate:hover {
+    color:white;
+    background-color: #cddffc; 
+}
+.btnContainer{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5%;
+}
+.containerSearchBar{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    padding-right: 5%;
+    margin-right: 20px;
+}

@@ -1,0 +1,53 @@
+
+.searchBarContaner{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.searchBar{
+    margin: 5px;
+    border-radius: 5px;
+    border: 0px ;
+    align-items: left;
+    width: 380px;
+    height: 30px;
+    font-size: 20px;
+}
+.btnSearch{
+    border: 2px solid white;
+    color:#118A95;
+    margin: 5px;
+    height: 32px;
+    font-weight: 550;
+    font-size:20px;
+    background-color: white;
+    transition: color 0.5s, background-color 0.5s; 
+    border-radius: 5px;
+    font-family:"Montserrat", sans-serif;
+}
+.btnSearch:hover {
+    color:white;
+    background-color: transparent; 
+} 
+.btnSearch:active{
+    box-shadow: inset 0 0 10px black;
+}
+.btnClear{
+    position: absolute;
+    border: none;
+    font-size:20px;
+    background: none;
+    color: rgb(130, 130, 130);
+    top:9px;
+    left: 74%;
+}
+.btnClearHidden{
+    visibility: hidden;
+    position: absolute;
+    border: none;
+    font-size:20px;
+    background: none;
+    color: rgb(130, 130, 130);
+    top:9px;
+    left: 74%;
+}

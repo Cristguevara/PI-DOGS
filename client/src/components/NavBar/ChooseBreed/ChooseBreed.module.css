@@ -1,0 +1,39 @@
+.botonClear{
+    visibility: hidden;
+    position:relative;
+    border: 1px solid #cddffc;
+    color:white;
+    font-weight: 500;
+    font-size:15px;
+    background-color: #cddffc;
+    border-radius: 5px;
+    font-family:"Montserrat", sans-serif;
+}
+.BtnClear{
+    position:relative;
+    border: 1px solid #cddffc;
+    color:white;
+    font-weight: 500;
+    font-size:15px;
+    background-color: #cddffc;
+    transition: color 0.5s, background-color 0.5s; 
+    border-radius: 5px;
+    font-family:"Montserrat", sans-serif;
+}
+.BtnClear:hover {
+    color:#cddffc;
+    background-color: transparent; 
+}
+.title{
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-weight: 500;
+    font-size:20px;
+}
+.input{
+    margin: 5px;
+    border-radius: 5px;
+    border: 0px ;
+    align-items: left;
+    width: 228px;
+}

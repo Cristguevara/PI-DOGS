@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';  
 import { useDispatch, useSelector } from 'react-redux';
-import {getAllDogs, getDogTemperaments,clearAllDogs} from '../../redux/actions/actions';
+import {getAllDogs, getDogTemperaments} from '../../redux/actions/actions';
 import DogCard from '../DogCard/DogCard.jsx';
 import NavBar from '../NavBar/NavBar';
 import styles from './Home.module.css';
@@ -51,20 +51,11 @@ function Home() {
   }
 
   let dogsFind=[]
-  const handleBack=()=>{
-     dispatch(clearAllDogs());
-     setIni(0);
-     setFin(8);
-     setDispPrev(true);
-     setDispNext(false);
-     dispatch(getAllDogs(''));
-  }
   if(dogs.length===0){
     dogsFind=<img  src={imageperrito} alt='img not found' />
   }else if(dogs==='No coincide con ningúna'){
     dogsFind=<div>
               <h1>No results found</h1>
-              <button className={styles.btnBack} onClick={handleBack}>Go Back</button>
               </div>
   } else if(dogsFilter.length===0){
     dogsFind=<div>
@@ -97,12 +88,15 @@ function Home() {
 
   let [disPrev, setDispPrev] = useState(true)
   let [disNext, setDispNext] = useState(false)
+  let disText = false
 
   if(dogs.length===0){
     disNext=true
+    disText=true
   }
   if(dogsFind.length===undefined){
     disNext=true
+    disText=true
   }
 
   if(dogsFind.length<=8){
@@ -149,6 +143,7 @@ function Home() {
       </div>
       <div className={styles.paginationContainer}>
       <button className={disPrev?styles.boton:styles.botonON} onClick={()=>Prev()} >Prev</button>
+      <label className={disText?styles.textPagination:styles.textPaginationON}>Page {fin/8} of {Math.floor(dogsFind.length/8)+1}</label>
       <button className={disNext?styles.boton:styles.botonON} onClick={()=>Next()} >Next</button>
       </div>
     </div>

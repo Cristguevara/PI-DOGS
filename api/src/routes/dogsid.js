@@ -25,15 +25,15 @@ router.get('/dogs/:idRaza', async (req, res, next) => {
             )
             let dogfilter=dogsfilter.filter(d => d.id===Number(idRaza))
             if(dogfilter.length===0){
-                res.send('El id de la raza de perro no existe')
+                res.status(201).send(['El id de la raza de perro no existe'])
             }else{
-                res.json(dogfilter)
+                res.status(200).json(dogfilter)
             }
         }else{
             let idmodifiqued=idRaza.split('-').join('').split('').map(n=> parseInt(n,16))
             let UUIDvalidator=idmodifiqued.filter(n => n>=0 && n<=15).length
             if(UUIDvalidator!==32 || idRaza.length!==36){
-                res.send('El id de la raza de perro no existe')
+                res.send(['El id de la raza de perro no existe'])
             }else{
             let resdb= await Dog.findAll({
                 where:{id: idRaza},
@@ -46,7 +46,7 @@ router.get('/dogs/:idRaza', async (req, res, next) => {
                  }],
               })
               if(resdb.length===0){
-                res.send('El id de la raza de perro no existe')
+                res.send(['El id de la raza de perro no existe'])
               }else{
                   let resdbmodifiqued=[]
                   resdb.forEach(d=>{

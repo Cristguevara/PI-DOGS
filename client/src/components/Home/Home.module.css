@@ -54,3 +54,16 @@
     color:white;
     background-color: #118A95; 
 }
+
+.textPagination{
+    visibility: hidden;
+    font-family:"Montserrat", sans-serif;
+    color:white;
+    font-size:30px;
+}
+.textPaginationON{
+    font-family:"Montserrat", sans-serif;
+    color:white;
+    font-weight: 700;
+    font-size:25px;
+}

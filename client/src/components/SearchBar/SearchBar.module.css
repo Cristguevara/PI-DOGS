@@ -51,3 +51,43 @@
     top:9px;
     left: 74%;
 }
+.searchFindContaner{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+.searchFindText{
+    font-family:"Montserrat", sans-serif;
+    color:white;
+    margin:0px 5px;  
+}
+.btnSearchFindHidden{
+    visibility: hidden;
+    border: 2px solid white;
+    color:#118A95;
+    margin: 5px;
+    height: 32px;
+    font-weight: 550;
+    font-size:20px;
+    background-color: white;
+    transition: color 0.5s, background-color 0.5s; 
+    border-radius: 5px;
+    font-family:"Montserrat", sans-serif;
+}
+.btnSearchFind{
+    border: 2px solid white;
+    color:#118A95;
+    margin: 0px;
+    height: 25px;
+    font-weight: 550;
+    font-size:15px;
+    background-color: white;
+    transition: color 0.5s, background-color 0.5s; 
+    border-radius: 5px;
+    font-family:"Montserrat", sans-serif;
+}
+.btnSearchFind:hover {
+    color:white;
+    background-color: transparent; 
+} 

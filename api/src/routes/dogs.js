@@ -68,13 +68,13 @@ router.get('/dogs', async (req, res, next) => {
       })
 
       if(!name){
-      res.json([...dogsApi,...resdbmodifiqued])
+      res.status(200).json([...dogsApi,...resdbmodifiqued])
       }else{
         let filterquery=[...dogsApi.filter(d=>d.name.toLowerCase().includes(name.toLowerCase())),...resdbmodifiqued.filter(d=>d.name.toLowerCase().includes(name.toLowerCase()))]
         if(filterquery.length===0){
-          res.send("No coincide con ningúna")
+          res.status(200).send("No coincide con ningúna")
         }
-        res.json(filterquery)
+        res.status(200).json(filterquery)
       }
     } catch (err) {
       next(err)

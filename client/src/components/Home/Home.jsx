@@ -130,6 +130,13 @@ function Home() {
       setDispNext(false)
     }
   }
+  let Pages=0
+  
+  if(dogsFind.length===8){
+    Pages=1
+  }else{
+    Pages=Math.floor(dogsFind.length/8)+1
+  }
   
   return (
     <div>
@@ -143,7 +150,7 @@ function Home() {
       </div>
       <div className={styles.paginationContainer}>
       <button className={disPrev?styles.boton:styles.botonON} onClick={()=>Prev()} >Prev</button>
-      <label className={disText?styles.textPagination:styles.textPaginationON}>Page {fin/8} of {Math.floor(dogsFind.length/8)+1}</label>
+      <label className={disText?styles.textPagination:styles.textPaginationON}>Page {fin/8} of {Pages}</label>
       <button className={disNext?styles.boton:styles.botonON} onClick={()=>Next()} >Next</button>
       </div>
     </div>
